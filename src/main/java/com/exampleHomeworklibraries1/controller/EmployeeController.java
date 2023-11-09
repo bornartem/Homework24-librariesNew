@@ -18,29 +18,29 @@ public class EmployeeController {
         this.employeeService = employeeService;
     }
 
-    @GetMapping(path = "/add")
+    @GetMapping("/add")
     public Employee addEmployee(@RequestParam("firstName") String firstName,
                                 @RequestParam("lastName") String lastName,
                                 @RequestParam("salary") int salary,
                                 @RequestParam("department") int department) {
-        Employee employee = new Employee(firstName, lastName, salary, department);
-        return employeeService.addEmployee(firstName, lastName, salary, department);
+        Employee employee = new Employee(firstName, lastName,  salary, department);
+        return employeeService.addEmployee(firstName, lastName,  salary, department);
     }
 
-    @GetMapping(path = "/remove")
+    @GetMapping("/remove")
     public Employee removeEmployee(@RequestParam("firstName") String firstName,
                                    @RequestParam("lastName") String lastName,
                                    @RequestParam("salary") int salary,
-                                   @RequestParam("department") int department){
-        return employeeService.removeEmployee(firstName, lastName, salary, department);
+                                   @RequestParam("department") int department) {
+        return employeeService.removeEmployee(firstName, lastName,  salary, department);
     }
 
-    @GetMapping(path = "/find")
+    @GetMapping("/find")
     public Employee findEmployee(@RequestParam("firstName") String firstName,
                                  @RequestParam("lastName") String lastName,
                                  @RequestParam("salary") int salary,
-                                 @RequestParam("department") int department){
-        return employeeService.findEmployee(firstName, lastName, salary, department);
+                                 @RequestParam("department") int department) {
+        return employeeService.findEmployee(firstName, lastName,  salary, department);
 
     }
 
